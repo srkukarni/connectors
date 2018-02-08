@@ -145,6 +145,7 @@ project(':rabbitmq') {
 project(':twitter') {
 	dependencies {
 		compile project(':core')
+		compile project(':pulsar')
 	}
 }
 
