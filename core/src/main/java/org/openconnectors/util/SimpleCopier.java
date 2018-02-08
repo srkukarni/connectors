@@ -64,7 +64,7 @@ public class SimpleCopier<I, O> {
     }
 
     private void consume(Collection<I> messages) {
-        if (messages != null) {
+        if (messages != null && !messages.isEmpty()) {
             Collection<O> output = new LinkedList<>();
             for (I message : messages) {
                 output.add(transformer.apply(message));
